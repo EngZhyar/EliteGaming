@@ -1,0 +1,527 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #111827;
+    color: #fff;
+    min-height: 100vh;
+}
+
+header {
+    background: #1f2937;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .4);
+}
+
+header h1 {
+    color: #00d9ff;
+    font-size: 28px;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px 20px;
+    background: #111827;
+    position: sticky;
+    top: 62px;
+    z-index: 99;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .3);
+    transition: all 0.3s ease;
+}
+
+/* Wrapper for the two boxes - ALWAYS side by side */
+.box-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 2;
+    min-width: 300px;
+}
+
+.box {
+    background: #1f2937;
+    border-radius: 10px;
+    padding: 12px 15px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .25);
+    transition: all 0.3s ease;
+}
+
+/* Progress bar container */
+.box.line-style {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 20px;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 8px;
+    min-width: 200px;
+    flex: 1;
+}
+
+
+.progress-container {
+    position: relative;
+    width: 100%;
+    height: 28px;
+    background: #1f2937;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid #374151;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #00d9ff, #00ff87);
+    border-radius: 14px;
+    transition: width 0.5s ease;
+    position: relative;
+}
+
+.progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.progress-container span {
+    font-size: 16px;
+    color: #00d9ff;
+    font-weight: bold;
+    min-width: 70px;
+    text-align: right;
+}
+
+.box.hidden {
+    display: none !important;
+}
+
+.box h3 {
+    color: #9ca3af;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.box span {
+    font-size: 20px;
+    color: #00d9ff;
+    font-weight: bold;
+}
+
+/* Storage box - make it smaller */
+.box:not(.line-style) {
+    flex: 0.5;
+    min-width: 150px;
+    padding: 12px 15px;
+}
+
+.buttons {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+button {
+    background: #00d9ff;
+    color: #111;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: .3s;
+    font-weight: bold;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+#sendGamesBtn {
+    background: #00d9ff;
+}
+
+#sendGamesBtn:hover {
+    background: #00b8d4;
+}
+
+#gamesContainer {
+    width: 95%;
+    margin: 20px auto 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px 0 40px 0;
+}
+
+.game {
+    background: #1f2937;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: .25s;
+    cursor: pointer;
+    border: 3px solid transparent;
+}
+
+.game:hover {
+    transform: translateY(-6px);
+}
+
+.game.selected {
+    border-color: #00d9ff;
+}
+
+.game img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.gameInfo {
+    padding: 15px;
+}
+
+.gameTitle {
+    font-size: 16px;
+    margin-bottom: 10px;
+    min-height: 45px;
+    word-break: break-word;
+}
+
+.gameSize {
+    color: #00d9ff;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.game input {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* 3 columns on ALL devices - no changes needed */
+@media(max-width:1024px) {
+    #gamesContainer {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+    }
+}
+
+@media(max-width:768px) {
+    #gamesContainer {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+    
+    .game img {
+        height: 200px;
+    }
+
+    /* Keep boxes side by side on tablet */
+    .box-wrapper {
+        flex-direction: row;
+        width: 100%;
+        min-width: auto;
+        gap: 10px;
+        flex-wrap: nowrap;
+    }
+
+    .box.line-style {
+        flex: 2;
+        min-width: auto;
+        width: auto;
+        padding: 6px 15px;
+    }
+
+    .box.line-style .progress-container {
+        min-width: auto;
+    }
+
+    .box:not(.line-style) {
+        flex: 1;
+        min-width: auto;
+        width: auto;
+        padding: 8px 12px;
+    }
+
+    .info {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .buttons {
+        width: auto;
+    }
+}
+
+@media(max-width:600px) {
+    #gamesContainer {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+    
+    .game img {
+        height: 160px;
+    }
+
+    /* Keep boxes side by side on mobile */
+    .box-wrapper {
+        flex-direction: row;
+        gap: 8px;
+        flex-wrap: nowrap;
+        min-width: auto;
+        width: 100%;
+    }
+
+    .box.line-style {
+        flex: 2;
+        min-width: auto;
+        padding: 5px 10px;
+    }
+
+    .box.line-style .progress-container {
+        min-width: auto;
+        height: 22px;
+    }
+
+    .box:not(.line-style) {
+        flex: 1;
+        min-width: auto;
+        padding: 6px 8px;
+    }
+
+    .box:not(.line-style) h3 {
+        font-size: 10px;
+        margin-bottom: 3px;
+    }
+
+    .box:not(.line-style) span {
+        font-size: 14px;
+    }
+
+    .progress-container span {
+        font-size: 13px;
+        min-width: 55px;
+    }
+}
+
+@media(min-width:700px){
+
+  #gamesContainer {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 6px;
+        padding: 8px 0 15px 0;
+    }
+}
+
+
+
+@media(max-width:450px) {
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    .info {
+        padding: 10px 12px;
+        gap: 8px;
+        top: 62px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .box-wrapper {
+        flex-direction: row;
+        gap: 6px;
+        flex-wrap: nowrap;
+        min-width: auto;
+        width: 100%;
+    }
+
+    .box {
+        padding: 6px 8px;
+    }
+
+    .box.line-style {
+        padding: 4px 8px;
+        gap: 4px;
+        flex: 2;
+        min-width: auto;
+    }
+
+    .progress-container {
+        height: 18px;
+    }
+
+    .progress-container span {
+        font-size: 11px;
+        min-width: 45px;
+    }
+
+    .box:not(.line-style) {
+        flex: 1;
+        min-width: auto;
+        padding: 4px 6px;
+    }
+
+    .box:not(.line-style) h3 {
+        font-size: 9px;
+        margin-bottom: 2px;
+    }
+
+    .box:not(.line-style) span {
+        font-size: 12px;
+    }
+
+    .buttons {
+        gap: 6px;
+        padding: 4px 0 0 0;
+        width: 100%;
+        justify-content: center;
+    }
+
+    button {
+        padding: 6px 12px;
+        font-size: 11px;
+    }
+
+    #gamesContainer {
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 10px;
+        gap: 8px;
+        padding: 10px 0 20px 0;
+    }
+
+    .game img {
+        height: 120px;
+    }
+
+    .gameTitle {
+        font-size: 11px;
+        min-height: 25px;
+    }
+
+    .gameInfo {
+        padding: 6px;
+    }
+
+    .gameSize {
+        font-size: 10px;
+        margin-bottom: 4px;
+    }
+
+    .game input {
+        width: 14px;
+        height: 14px;
+    }
+
+}
+
+@media(max-width:380px) {
+    #gamesContainer {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6px;
+        padding: 8px 0 15px 0;
+    }
+    
+    .game img {
+        height: 100px;
+    }
+
+    .gameTitle {
+        font-size: 10px;
+        min-height: 20px;
+    }
+
+    .gameInfo {
+        padding: 4px;
+    }
+
+    .gameSize {
+        font-size: 9px;
+        margin-bottom: 3px;
+    }
+
+    .game input {
+        width: 12px;
+        height: 12px;
+    }
+
+    .box-wrapper {
+        flex-direction: row;
+        gap: 4px;
+        flex-wrap: nowrap;
+    }
+
+    .box.line-style {
+        padding: 3px 6px;
+        flex: 2;
+    }
+
+    .progress-container {
+        height: 16px;
+    }
+
+    .progress-container span {
+        font-size: 10px;
+        min-width: 40px;
+    }
+
+    .box:not(.line-style) {
+        padding: 3px 5px;
+        flex: 1;
+    }
+
+    .box:not(.line-style) h3 {
+        font-size: 8px;
+        margin-bottom: 1px;
+    }
+
+    .box:not(.line-style) span {
+        font-size: 10px;
+    }
+
+    .buttons {
+        gap: 4px;
+    }
+
+    button {
+        padding: 4px 10px;
+        font-size: 10px;
+    }
+}
