@@ -325,7 +325,7 @@ sendGamesBtn.addEventListener("click", function() {
         whatsappBtn.onclick = function() {
             const text = document.getElementById('messageText').value;
             const encodedMessage = encodeURIComponent(text);
-            const phoneNumber = '9647504633519';
+            const phoneNumber = '9647501238780';
             const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
             window.open(whatsappURL, '_blank');
         };
