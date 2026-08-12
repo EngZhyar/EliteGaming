@@ -11,6 +11,11 @@ let selectedGames = [];
 let showOnlySelected = false;
 const WARNING_THRESHOLD = 464;
 
+// Storage thresholds
+const FLASH_THRESHOLD = 58;
+const HARD_320_THRESHOLD = 297.5;
+const HARD_500_THRESHOLD = 464;
+
 function getGameName(path) {
     let name = path.split("/").pop();
     name = name.substring(0, name.lastIndexOf("."));
@@ -51,7 +56,9 @@ function renderGames() {
         const isSelected = selectedGames.includes(game.image);
         if (isSelected) card.classList.add("selected");
 
-        const canSelect = (totalSelectedSize + game.size <= WARNING_THRESHOLD) || isSelected;
+        // Check if adding this game would exceed the threshold
+        const potentialTotal = totalSelectedSize + game.size;
+        const canSelect = (potentialTotal <= WARNING_THRESHOLD) || isSelected;
         const isDisabled = !canSelect && !isSelected;
 
         const checked = isSelected ? "checked" : "";
@@ -111,7 +118,8 @@ function toggleGame(image) {
             return item !== image;
         });
     } else {
-        if (totalSelectedSize + game.size <= WARNING_THRESHOLD) {
+        const potentialTotal = totalSelectedSize + game.size;
+        if (potentialTotal <= WARNING_THRESHOLD) {
             selectedGames.push(image);
         } else {
             alert(`ناتوانیت ئەم یاریە زیاد بکەیت! بۆشایی پڕە`);
@@ -134,24 +142,28 @@ function updateSummary() {
     if (progressBar) {
         let percentage = (total / WARNING_THRESHOLD) * 100;
         
-        if (total <= WARNING_THRESHOLD) {
-            progressBar.style.background = 'linear-gradient(90deg, #4CAF50, #8BC34A)';
-        } else {
-            percentage = 100;
-            progressBar.style.background = 'linear-gradient(90deg, #ff6b6b, #ff4444)';
-        }
-        
         if (percentage > 100) percentage = 100;
         if (percentage < 0) percentage = 0;
         progressBar.style.width = percentage + '%';
     }
 
-    // Just 2 states
-    if (total < WARNING_THRESHOLD) {
-        storage.innerText = "Hard 500GB";
+    // Update storage text based on total size
+    let storageText = "";
+    if (total <= FLASH_THRESHOLD) {
+        storageText = "Flash 64GB";
+        progressBar.style.background = 'linear-gradient(90deg, #4CAF50, #8BC34A)';
+    } else if (total <= HARD_320_THRESHOLD) {
+        storageText = "Hard 320GB";
+        progressBar.style.background = 'linear-gradient(90deg, #FFA500, #FF8C00)';
+    } else if (total <= HARD_500_THRESHOLD) {
+        storageText = "Hard 500GB";
+        progressBar.style.background = 'linear-gradient(90deg, #ff6b6b, #ff4444)';
     } else {
-        storage.innerText = "پڕە";
+        storageText = "پڕە";
+        progressBar.style.background = 'linear-gradient(90deg, #ff0000, #cc0000)';
     }
+    
+    storage.innerText = storageText;
 }
 
 clearButton.addEventListener("click", function() {
