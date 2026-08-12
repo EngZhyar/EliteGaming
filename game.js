@@ -688,10 +688,6 @@ const games = [
         size: 4.30
     },
     {
-        image: "assets/king arthur.jpg",
-        size: 2.62
-    },
-    {
         image: "assets/king kong.jpg",
         size: 1.21
     },
