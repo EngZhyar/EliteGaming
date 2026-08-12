@@ -159,7 +159,7 @@ function updateSummary() {
         storageText = "Hard 500GB";
         progressBar.style.background = 'linear-gradient(90deg, #ff6b6b, #ff4444)';
     } else {
-        storageText = "پڕە";
+        storageText = "شوێن نەماوە";
         progressBar.style.background = 'linear-gradient(90deg, #ff0000, #cc0000)';
     }
     
