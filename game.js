@@ -599,6 +599,18 @@ const games = [
         image: "assets/harvest moon wonderfullk.jpg",
         size: 1.19
     },
+
+    {
+        image: "assets/heracles battle.jpg",
+        size: 0.20
+    },
+
+      {
+        image: "assets/heracles chariot.jpg",
+        size: 0.11
+    },
+
+    
     {
         image: "assets/history battle pacific.jpg",
         size: 4.12
@@ -631,6 +643,12 @@ const games = [
         image: "assets/home alone.jpg",
         size: 0.05
     },
+
+  {
+        image: "assets/hudson selection.jpg",
+        size: 0.48
+    },
+    
     {
         image: "assets/hulk 2008.jpg",
         size: 4.13
@@ -679,6 +697,17 @@ const games = [
         image: "assets/jurasic hunter.jpg",
         size: 1.16
     },
+
+  {
+        image: "assets/kamen rider blade.jpg",
+        size: 0.42
+    },
+
+      {
+        image: "assets/kamen rider kabuto.jpg",
+        size: 0.53
+    },
+    
     {
         image: "assets/kengo.jpg",
         size: 0.40
@@ -1081,6 +1110,12 @@ const games = [
         image: "assets/psi ops.jpg",
         size: 3.51
     },
+
+  {
+        image: "assets/power ranger dino.jpg",
+        size: 0.57
+    },
+    
     {
         image: "assets/punisher.jpg",
         size: 1.85
@@ -1209,6 +1244,12 @@ const games = [
         image: "assets/sega.jpeg",
         size: 0.04
     },
+
+      {
+        image: "assets/sega 54.jpeg",
+        size: 1.10
+    },
+    
     {
         image: "assets/serouse sam.jpg",
         size: 1.14
