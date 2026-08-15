@@ -1112,7 +1112,7 @@ const games = [
     },
 
   {
-        image: "assets/power ranger dino.jpg",
+        image: "assets/power rangers dino.jpg",
         size: 0.57
     },
     
