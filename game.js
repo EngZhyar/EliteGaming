@@ -55,6 +55,9 @@ const games = [
         image: "assets/airforce delta strike.jpg",
         size: 1.59
     },
+
+    {image: "assets/alien hominid.jpg", size: 1.24 }
+,
     {
         image: "assets/alone in the dark new nightmare.jpg",
         size: 4.16
@@ -86,7 +89,11 @@ const games = [
     {
         image: "assets/barnyard.jpg",
         size: 1.92
-    },
+    }
+    
+    ,{image: "assets/Battle Engine Aquila.jpg", size: 3.36 }
+
+    ,
     {
         image: "assets/batman begins.jpg",
         size: 2.34
@@ -122,7 +129,13 @@ const games = [
     {
         image: "assets/ben vilgax.jpg",
         size: 4.37
-    },
+    }
+    
+    ,{image: "assets/Berserk.jpg", size: 3.98 }
+
+    ,
+
+    
     {
         image: "assets/black.jpg",
         size: 3.64
@@ -138,7 +151,10 @@ const games = [
     {
         image: "assets/brother road.jpg",
         size: 2.91
-    },
+    }
+    ,{image: "assets/bujingai.jpg", size: 3.60 }
+
+    ,
     {
         image: "assets/bully.jpg",
         size: 4.31
@@ -158,7 +174,13 @@ const games = [
     {
         image: "assets/cabela north america.jpg",
         size: 4.14
-    },
+    }
+    ,{image: "assets/cabela alaskan adventure.jpg", size: 4.14 }
+,{image: "assets/cabela big game hunter.jpg", size: 4.14 }
+,{image: "assets/cabela dangerous adventures.jpg", size: 4.14 }
+,{image: "assets/cabela dangerous hunt 2.jpg", size: 4.14 }
+,{image: "assets/cabela outdoor adventure.jpg", size: 4.14 }
+    ,
     {
         image: "assets/call of duty 1.jpg",
         size: 2.08
@@ -198,11 +220,19 @@ const games = [
     {
         image: "assets/casper spirit.jpg",
         size: 0.41
-    },
+    }
+    
+    ,{image: "assets/castlevanin.jpg", size: 2.81 }
+
+    ,
     {
         image: "assets/cat in the hat.jpg",
         size: 2.12
-    },
+    }
+    
+,{image: "assets/Chaos Legion.jpg", size: 4.37 }
+,{image: "assets/chicken little ace.jpg", size: 1.62 }
+    ,
     {
         image: "assets/cid the dummy.jpg",
         size: 0.60
@@ -210,7 +240,10 @@ const games = [
     {
         image: "assets/cold fear.jpg",
         size: 3.31
-    },
+    }
+    ,{image: "assets/cold winter.jpg", size: 3.36 }
+
+    ,
     {
         image: "assets/commandos.jpg",
         size: 2.97
@@ -218,7 +251,10 @@ const games = [
     {
         image: "assets/contra.jpg",
         size: 0.61
-    },
+    }
+    ,{image: "assets/Counter Terrorist special force.jpg", size: 1.16 }
+
+    ,
     {
         image: "assets/crash cortex.jpg",
         size: 0.48
@@ -306,7 +342,11 @@ const games = [
     {
         image: "assets/dmc 2.jpg",
         size: 8.75
-    },
+    }
+    ,{image: "assets/Don 2.jpg", size: 2.93 }
+
+    
+    ,
     {
         image: "assets/dora.jpg",
         size: 1.74
@@ -314,7 +354,10 @@ const games = [
     {
         image: "assets/downhill.jpg",
         size: 2.58
-    },
+    }
+    ,{image: "assets/Dragon quest the journey.jpg", size: 3.78 }
+,{image: "assets/Drakengard.jpg", size: 4.14 }
+    ,
     {
         image: "assets/driv3r.jpg",
         size: 3.82
@@ -358,7 +401,10 @@ const games = [
     {
         image: "assets/dynasty warriors 6.jpg",
         size: 7.15
-    },
+    }
+    
+,{image: "assets/Enthusia Professional Racing - Subaru Impreza WRX STI.png", size: 1.19 }
+    ,
     {
         image: "assets/eragon.jpg",
         size: 2.57
@@ -366,7 +412,12 @@ const games = [
     {
         image: "assets/evil dead.jpg",
         size: 2.28
-    },
+    }
+    ,{image: "assets/Extermination.jpg", size: 3.13 }
+
+   
+    
+    ,
     {
         image: "assets/f1 carrear challenge.jpg",
         size: 0.40
@@ -378,7 +429,10 @@ const games = [
     {
         image: "assets/f1 racing champion.jpg",
         size: 0.51
-    },
+    }
+    
+,{image: "assets/fahrenheit.jpg", size: 3.22 }
+    ,
     {
         image: "assets/fantastic 4 silver.jpg",
         size: 4.06
@@ -442,7 +496,10 @@ const games = [
     {
         image: "assets/fifa 14.jpg",
         size: 4.37
-    },
+    }
+    ,{image: "assets/Final Armada.jpg", size: 1.18 }
+,{image: "assets/finding nemo.jpg", size: 2.11 }
+    ,
     {
         image: "assets/flatout 1.jpg",
         size: 1.23
@@ -454,7 +511,10 @@ const games = [
     {
         image: "assets/flushed away.jpg",
         size: 1.70
-    },
+    }
+    ,{image: "assets/Forbidden Siren.jpg", size: 4.29 }
+
+    ,
     {
         image: "assets/ford racing 2.jpg",
         size: 0.58
@@ -502,7 +562,11 @@ const games = [
     {
         image: "assets/Getaway.jpg",
         size: 4.18
-    },
+    }
+    
+    ,{image: "assets/Ghost Hunter.jpg", size: 3.90 }
+
+    ,
     {
         image: "assets/ghost rider.jpg",
         size: 2.45
@@ -530,7 +594,10 @@ const games = [
     {
         image: "assets/gradius v.jpg",
         size: 0.37
-    },
+    }
+    ,{image: "assets/Gran turismo Concept airtrek turbo.jpg", size: 3.95 }
+
+    ,
     {
         image: "assets/GT 3.jpg",
         size: 3.61
@@ -566,7 +633,10 @@ const games = [
     {
         image: "assets/gta vice city.jpg",
         size: 4.37
-    },
+    }
+    ,{image: "assets/GunGrave overdose.jpg", size: 4.08 }
+
+    ,
     {
         image: "assets/happy feet.jpg",
         size: 1.17
@@ -590,7 +660,10 @@ const games = [
     {
         image: "assets/harry phoniex.jpg",
         size: 4.33
-    },
+    }
+    ,{image: "assets/harry potter prisoner of azkaban.jpg", size: 2.13 }
+
+    ,
     {
         image: "assets/harvest moon save.jpg",
         size: 0.07
@@ -660,7 +733,10 @@ const games = [
     {
         image: "assets/hulk.jpg",
         size: 3.84
-    },
+    }
+    ,{image: "assets/Hunter x Hunter.jpg", size: 0.59 }
+
+    ,
     {
         image: "assets/ice age 1.jpg",
         size: 3.99
@@ -723,7 +799,10 @@ const games = [
     {
         image: "assets/king route 66.jpg",
         size: 1.23
-    },
+    }
+    ,{image: "assets/Knight rider.jpg", size: 0.42 }
+,{image: "assets/Kyoushuu Kidou Butai - Kougeki Helicopter Senki.jpg", size: 0.57 }
+    ,
     {
         image: "assets/legend of wrestling.jpg",
         size: 0.57
@@ -792,7 +871,10 @@ const games = [
     {
         image: "assets/Marvel quad.jpg",
         size: 4.35
-    },
+    }
+    ,{image: "assets/matrix.jpg", size: 4.37 }
+
+    ,
     {
         image: "assets/max payne 1.jpg",
         size: 4.17
@@ -816,7 +898,10 @@ const games = [
     {
         image: "assets/medal vangaurd.jpg",
         size: 4.13
-    },
+    }
+    ,{image: "assets/Meet the Robinsons.jpg", size: 3.92 }
+
+    ,
     {
         image: "assets/mega man x8.jpg",
         size: 3.00
@@ -832,7 +917,10 @@ const games = [
     {
         image: "assets/metal slug anthology.jpg",
         size: 1.28
-    },
+    }
+    ,{image: "assets/Minority Report everybody runs.jpg", size: 1.37 }
+
+    ,
     {
         image: "assets/mgs 2 son.jpg",
         size: 4.30
@@ -937,7 +1025,10 @@ const games = [
     {
         image: "assets/one peace.jpg",
         size: 1.16
-    },
+    }
+    ,{image: "assets/onimusha 3.jpg", size: 3.36 }
+
+    ,
     {
         image: "assets/onimusha dawn.jpg",
         size: 8.74
@@ -1105,7 +1196,11 @@ const games = [
     {
         image: "assets/prisoner of war.jpg",
         size: 1.87
-    },
+    }
+    
+    ,{image: "assets/project snow blind.jpg", size: 1.65 }
+
+    ,
     {
         image: "assets/psi ops.jpg",
         size: 3.51
@@ -1135,7 +1230,13 @@ const games = [
     {
         image: "assets/rataouille.jpg",
         size: 1.16
-    },
+    }
+    ,{image: "assets/Ratchet&Clank 2 Going Commando.jpg", size: 3.30 }
+
+    
+    ,{image: "assets/Rayman M.jpg", size: 0.88 }
+
+    ,
     {
         image: "assets/rebel riders.jpg",
         size: 0.31
@@ -1191,7 +1292,11 @@ const games = [
     {
         image: "assets/ridge racer v.jpg",
         size: 0.60
-    },
+    }
+    ,{image: "assets/Road Rage 3.jpg", size: 0.29 }
+,{image: "assets/Robotech invasion.jpg", size: 4.29 }
+,{image: "assets/Rogue Galaxy.jpg", size: 7.90 }
+    ,
     {
         image: "assets/robin.jpg",
         size: 0.09
@@ -1248,7 +1353,10 @@ const games = [
       {
         image: "assets/sega 54.jpeg",
         size: 1.10
-    },
+    }
+    ,{image: "assets/Sega rally.jpg", size: 0.56 }
+
+    ,
     
     {
         image: "assets/serouse sam.jpg",
@@ -1257,7 +1365,10 @@ const games = [
     {
         image: "assets/shadow collosus.jpg",
         size: 4.31
-    },
+    }
+    ,{image: "assets/Shadow of destiny.jpg", size: 4.00 }
+
+    ,
     {
         image: "assets/shadow of hedge.jpg",
         size: 4.18
@@ -1341,11 +1452,19 @@ const games = [
     {
         image: "assets/sly 3.jpg",
         size: 3.31
-    },
+    }
+    
+    ,{image: "assets/Smuggler's run 2.jpg", size: 1.31 }
+
+    ,
     {
         image: "assets/sniper elite.jpg",
         size: 2.48
-    },
+    }
+    ,{image: "assets/Soul reaver 2.jpg", size: 4.33 }
+,{image: "assets/Spawn Armageddon.jpg", size: 2.06 }
+    
+    ,
     {
         image: "assets/spartan.jpg",
         size: 2.04
@@ -1381,7 +1500,10 @@ const games = [
     {
         image: "assets/splinter cell pandora.jpg",
         size: 1.68
-    },
+    }
+    ,{image: "assets/splinter cell double agent.jpg", size: 2.93 }
+
+    ,
     {
         image: "assets/splinter cell stealth.jpg",
         size: 2.64
@@ -1417,11 +1539,18 @@ const games = [
     {
         image: "assets/spyhunter.jpg",
         size: 1.83
-    },
+    }
+    ,{image: "assets/spy vs spy.jpg", size: 4.18 }
+,{image: "assets/starwars the force unleashed.jpg", size: 3.51 }
+
+    ,
     {
         image: "assets/steam boy.jpg",
         size: 1.17
-    },
+    }
+    ,{image: "assets/Stitch Experiment.jpg", size: 1.68 }
+
+    ,
     {
         image: "assets/street fighter anninversary.jpg",
         size: 3.17
@@ -1429,7 +1558,10 @@ const games = [
     {
         image: "assets/stuart 3.jpg",
         size: 3.97
-    },
+    }
+    ,{image: "assets/Sub Rebellion.jpg", size: 0.46 }
+
+    ,
     {
         image: "assets/suffering.jpg",
         size: 3.31
@@ -1445,7 +1577,9 @@ const games = [
     {
         image: "assets/swat global.jpg",
         size: 2.67
-    },
+    }
+    ,{image: "assets/Sword of Destiny.jpg", size: 4.24 }
+    ,
     {
         image: "assets/syphonfilter dark mirrior.jpg",
         size: 4.13
@@ -1469,7 +1603,9 @@ const games = [
     {
         image: "assets/tekken tag.jpg",
         size: 0.59
-    },
+    }
+    ,{image: "assets/Tenchu Fatal Shadows.jpg", size: 3.58 }
+    ,
     {
         image: "assets/tenchu wrath.jpg",
         size: 3.66
@@ -1477,7 +1613,11 @@ const games = [
     {
         image: "assets/terminator 3.jpg",
         size: 4.37
-    },
+    }
+    ,{image: "assets/The haunted mansion.jpg", size: 1.30 }
+,{image: "assets/they came from the skies.jpg", size: 0.13 }
+,{image: "assets/tim burton the nightmare.jpg", size: 4.22 }
+    ,
     {
         image: "assets/the mummy.jpg",
         size: 0.71
@@ -1577,7 +1717,10 @@ const games = [
     {
         image: "assets/up.jpg",
         size: 1.34
-    },
+    }
+    ,{image: "assets/Urban chaos.jpg", size: 4.32 }
+
+    ,
     {
         image: "assets/urban reign.jpg",
         size: 3.85
@@ -1609,7 +1752,14 @@ const games = [
     {
         image: "assets/wallace and groomit.jpg",
         size: 3.87
-    },
+    }
+    
+,{image: "assets/Wallace Groomit proyecto del.jpg", size: 2.82 }
+,{image: "assets/warhammer 40000.jpg", size: 1.15 }
+,{image: "assets/Whiplash.jpg", size: 4.01 }
+,{image: "assets/without warnning.jpg", size: 1.88 }
+,{image: "assets/World war zero.jpg", size: 1.18 }
+    ,
     {
         image: "assets/Warriors orochi 1.jpg",
         size: 2.49
@@ -1665,7 +1815,10 @@ const games = [
     {
         image: "assets/yakuza 2.jpg",
         size: 7.71
-    },
+    }
+    
+,{image: "assets/Yoshitsune Eiyuuden.jpg", size: 3.19 }
+    ,
     {
         image: "assets/zapper.jpg",
         size: 0.49
