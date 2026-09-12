@@ -158,7 +158,12 @@ const games = [
     {
         image: "assets/bully.jpg",
         size: 4.31
-    },
+    }
+    
+    ,
+
+    {image:"assets/Burnout 2.jpg",size:3.84},
+
     {
         image: "assets/burnout 3.jpg",
         size: 2.67
@@ -237,6 +242,10 @@ const games = [
         image: "assets/cid the dummy.jpg",
         size: 0.60
     },
+
+{image:"assets/clock tower 3.jpg",size:4.28},
+
+    
     {
         image: "assets/cold fear.jpg",
         size: 3.31
@@ -498,7 +507,11 @@ const games = [
         size: 4.37
     }
     ,{image: "assets/Final Armada.jpg", size: 1.18 }
-,{image: "assets/finding nemo.jpg", size: 2.11 }
+
+,{image:"assets/fight club.jpg",size:1.41},
+
+    
+{image: "assets/finding nemo.jpg", size: 2.11 }
     ,
     {
         image: "assets/flatout 1.jpg",
@@ -587,6 +600,8 @@ const games = [
         image: "assets/god of war 2.jpg",
         size: 7.94
     },
+    {image: "assets/god of war kurdi kon.png", size: 7.94},
+
     {
         image: "assets/golden eye rogue.jpg",
         size: 4.24
@@ -618,6 +633,17 @@ const games = [
         image: "assets/gta Faxir.png",
         size: 3.38
     },
+{image:"assets/Aziz waysy.jpg",size: 3.99},
+{image:"assets/GTA kurdi.png",size:3.33},
+{image: "assets/gta ismail.jpg", size: 4.10 }, 
+{image: "assets/gta hama krmashani.jpg", size: 3.79 },
+{image: "assets/gta baxtyar salh.jpg", size: 4.28 },
+{image: "assets/awat.jpg", size: 4.19 }
+,
+
+
+
+    
     {
         image: "assets/gta liberty city.jpg",
         size: 3.73
@@ -1161,6 +1187,9 @@ const games = [
         image: "assets/pes 2026.jpg",
         size: 1.50
     },
+
+    {image: "assets/pes 2027.jpg", size: 1.48 }, 
+
     {
         image: "assets/pirate carrebean world.jpg",
         size: 1.20
@@ -1792,6 +1821,9 @@ const games = [
         image: "assets/wwe just bring it.jpg",
         size: 2.63
     },
+{image:"assets/wwe here comes.jpg",size:4.18},
+
+    
     {
         image: "assets/wwii tank battel.jpg",
         size: 0.27
