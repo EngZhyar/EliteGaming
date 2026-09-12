@@ -508,7 +508,7 @@ const games = [
     }
     ,{image: "assets/Final Armada.jpg", size: 1.18 }
 
-,{image:"assets/fight club.jpg",size:1.41},
+,{image:"assets/Fight Club.jpg.jpg",size:1.41},
 
     
 {image: "assets/finding nemo.jpg", size: 2.11 }
