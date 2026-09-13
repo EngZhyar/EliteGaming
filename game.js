@@ -1128,7 +1128,7 @@ const games = [
         size: 1.87
     },
     {
-        image: "assets/pes 2012.png",
+        image: "assets/pes 2012 kurdi.png",
         size: 2.39
     },
     {
