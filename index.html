@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ckb" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EliteGaming — کۆکراوەی یاریەکانی PS2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;600;700&family=Noto+Kufi+Arabic:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= INTRO SPLASH ================= -->
+<div id="introScreen" class="intro-screen">
+    <div class="intro-bg"></div>
+    <div class="intro-left"  id="introLeft"></div>
+    <div class="intro-right" id="introRight"></div>
+    <div class="intro-center">
+        <img id="introImage" src="assets/elitegaming.jpeg" alt="EliteGaming">
+        <div class="intro-loading">EliteGaming</div>
+    </div>
+</div>
+
+<!-- ================= MAIN ================= -->
+<div id="mainApp" class="main-app hidden">
+
+    <div class="sticky-top">
+
+        <!-- HEADER -->
+        <header class="ps2-header">
+            <div class="header-glow"></div>
+            <div class="header-inner">
+                <div class="logo">
+                    <span class="logo-icon">🎮</span>
+                    <span class="logo-text">EliteGaming</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- DASHBOARD BAR + DRIVE LABEL -->
+        <section class="dashboard-bar">
+            <div class="dash-bar-wrap">
+                <div class="dash-bar" id="dashBar">
+                    <div class="dash-bar-fill" id="progressBar"></div>
+                    <div class="dash-bar-glow"></div>
+                    <div class="dash-bar-percent" id="barPercent">0% USED</div>
+                </div>
+            </div>
+            <div class="drive-label" id="storage">Flash 64GB</div>
+        </section>
+
+        <!-- ACTION BAR -->
+        <section class="action-bar">
+            <button class="action-btn drive-btn" id="driveBtn">
+                <span>💰</span> نرخەکان
+            </button>
+            <button class="action-btn clear-btn" id="clearSelection">
+                <span>🗑</span> سڕینەوە
+            </button>
+            <button class="action-btn request-btn" id="sendGamesBtn">
+                <span>📤</span> ناردنی داواکاری
+            </button>
+        </section>
+
+        <!-- CONTROLS -->
+        <section class="controls">
+            <div class="search-wrap">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" placeholder="گەڕان بۆ یاریەکان...">
+            </div>
+
+            <div class="controls-row">
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">هەموو یاریەکان</button>
+                    <button class="filter-tab" data-filter="selected">یاریە دیاریکراوەکان</button>
+                </div>
+
+                <div class="sort-wrap">
+                    <select id="sortSelect">
+                        <option value="default">ڕێزبەندی</option>
+                        <option value="name-asc">A → Z</option>
+                        <option value="name-desc">Z → A</option>
+                        <option value="size-asc">قەبارە: بچووک → گەورە</option>
+                        <option value="size-desc">قەبارە: گەورە → بچووک</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- GAMES GRID -->
+    <section id="gamesContainer" class="games-container"></section>
+
+</div>
+
+<!-- ================= PRICES MODAL ================= -->
+<div class="modal-overlay hidden" id="pricesModal">
+    <div class="modal-box prices-modal-box">
+        <button class="modal-close" data-close>✕</button>
+        <h2 class="modal-title">نرخەکان</h2>
+        <p class="modal-sub">هەڵبژاردن و نرخەکانی هارد دیسک</p>
+
+        <div class="price-cards">
+
+            <div class="price-card">
+                <div class="price-card-top">
+                    <div class="price-card-icon">💽</div>
+                    <div class="price-card-title">هارد 500GB</div>
+                </div>
+                <div class="price-card-desc">
+خۆت یاریەکان دیاری دەکەی تا پڕ دەبێت کە دەکاتە زیاتر لە 140 یاری و زەمانی هەفتەیەکی لەگەڵە
+                </div>
+                <div class="price-card-bottom">
+                    <div class="price-card-price">50,000 IQD</div>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="price-card-top">
+                    <div class="price-card-icon">💽</div>
+                    <div class="price-card-title">هارد 500GB</div>
+                </div>
+                <div class="price-card-desc">
+خۆت یاریەکان دیاری دەکەی تا دەگاتە 300  گێگا  کە دەکاتە زیاتر لە 80 یاری و زەمانی هەفتەیەکی لەگەڵە
+                </div>
+                <div class="price-card-bottom">
+                    <div class="price-card-price">40,000 IQD</div>
+                </div>
+            </div>
+
+
+
+  <div class="price-card">
+                <div class="price-card-top">
+                    <div class="price-card-icon">💽</div>
+                    <div class="price-card-title">هارد 320GB</div>
+                </div>
+                <div class="price-card-desc">
+خۆت یاریەکان دیاری دەکەی تا پڕ دەبێت کە دەکاتە زیاتر لە 80 یاری و زەمانی هەفتەیەکی لەگەڵە
+                </div>
+                <div class="price-card-bottom">
+                    <div class="price-card-price">30,000 IQD</div>
+                </div>
+            </div>
+
+            
+
+        </div>
+    </div>
+</div>
+
+<!-- ================= REQUEST MODAL ================= -->
+<div class="modal-overlay hidden" id="requestModal">
+    <div class="modal-box request-modal-box">
+        <button class="modal-close" data-close>✕</button>
+        <h2 class="modal-title">ناردنی داواکاری</h2>
+        <p class="modal-sub">شێوازی ناردنی داواکاری هەڵبژێرە</p>
+
+        <div class="request-options">
+            <button class="request-option wa1" data-action="wa1">
+                <div class="req-icon">📱</div>
+                <div class="req-text">
+                    <strong>PS2</strong>
+                    <span>07501238780</span>
+                </div>
+            </button>
+
+            <button class="request-option wa2" data-action="wa2">
+                <div class="req-icon">📱</div>
+                <div class="req-text">
+                    <strong>PC &amp; Laptop</strong>
+                    <span>07518979796</span>
+                </div>
+            </button>
+
+            <button class="request-option copy" data-action="copy">
+                <div class="req-icon">📋</div>
+                <div class="req-text">
+                    <strong>کۆپیکردنی داواکاری</strong>
+                    <span></span>
+                </div>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- ================= TOAST ================= -->
+<div class="toast hidden" id="toast"></div>
+
+<script src="game.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
