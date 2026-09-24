@@ -323,12 +323,20 @@ requestOptions.forEach(opt => {
                 showToast('داواکاری کۆپی کرا!');
                 requestModal.classList.add('hidden');
             });
-        } else if (action === 'wa1' || action === 'wa2') {
-            const phone = action === 'wa1' ? '9647501238780' : '9647518979796';
-            const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+        }
+           else if (action === 'wa1') {
+            const url = `https://wa.me/9647501238780?text=${encodeURIComponent(message)}`;
             window.open(url, '_blank');
             requestModal.classList.add('hidden');
         }
+
+        else if (action === 'wa2') {
+            const url = `https://wa.me/9647518979796?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+            requestModal.classList.add('hidden');
+        }
+        
+     
     });
 });
 
