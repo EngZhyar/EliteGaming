@@ -125,7 +125,7 @@ function getCurrentDriveInfo() {
             label: 'Hard 320GB',
             limit: HARD_320_THRESHOLD,
             color: 'linear-gradient(90deg, #FFA500, #FF8C00)',
-            price: 40000,
+            price: 30000,
             capacity: 320
         };
     } else if (total <= HARD_500_THRESHOLD) {
@@ -304,6 +304,9 @@ function buildRequestMessage() {
     return message;
 }
 
+/* ---------------------------------------------
+   REQUEST OPTIONS (WhatsApp + Copy)
+   --------------------------------------------- */
 requestOptions.forEach(opt => {
     opt.addEventListener('click', () => {
         const action = opt.dataset.action;
@@ -324,19 +327,16 @@ requestOptions.forEach(opt => {
                 requestModal.classList.add('hidden');
             });
         }
-           else if (action === 'wa1') {
+        else if (action === 'wa1') {
             const url = `https://wa.me/9647501238780?text=${encodeURIComponent(message)}`;
             window.open(url, '_blank');
             requestModal.classList.add('hidden');
         }
-
         else if (action === 'wa2') {
             const url = `https://wa.me/9647518979796?text=${encodeURIComponent(message)}`;
             window.open(url, '_blank');
             requestModal.classList.add('hidden');
         }
-        
-     
     });
 });
 
