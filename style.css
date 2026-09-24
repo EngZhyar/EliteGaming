@@ -428,7 +428,7 @@ button { cursor: pointer; border: none; outline: none; font-family: inherit; }
     display: flex;
     gap: 10px;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;   /* keep side by side */
 }
 
 .filter-tabs {
@@ -462,6 +462,10 @@ button { cursor: pointer; border: none; outline: none; font-family: inherit; }
 }
 
 .filter-tab:hover:not(.active) { color: var(--ps2-cyan); }
+
+.sort-wrap {
+    flex-shrink: 0;
+}
 
 .sort-wrap select {
     background: rgba(13, 26, 53, 0.8);
@@ -937,7 +941,8 @@ button { cursor: pointer; border: none; outline: none; font-family: inherit; }
 
     .controls { padding: 0 14px 10px; gap: 8px; }
 
-    .controls-row { gap: 8px; }
+    /* Keep filter tabs + sort side by side */
+    .controls-row { gap: 8px; flex-wrap: nowrap; }
     .filter-tab { padding: 7px 10px; font-size: 11px; }
     .sort-wrap select { padding: 8px 10px; font-size: 11px; }
 
@@ -986,11 +991,22 @@ button { cursor: pointer; border: none; outline: none; font-family: inherit; }
     .search-wrap input { padding: 8px 34px 8px 10px; font-size: 11px; }
     .search-icon { right: 10px; font-size: 12px; }
 
-    .controls-row { flex-direction: column; align-items: stretch; gap: 6px; }
-    .filter-tabs { width: 100%; }
-    .filter-tab { font-size: 10px; padding: 7px 8px; }
-    .sort-wrap { width: 100%; }
-    .sort-wrap select { width: 100%; font-size: 11px; padding: 8px 10px; }
+    /* Still keep them side by side on phones */
+    .controls-row {
+        flex-direction: row;
+        align-items: center;
+        gap: 6px;
+        flex-wrap: nowrap;
+    }
+    .filter-tabs { flex: 1; min-width: 0; }
+    .filter-tab {
+        font-size: 10px;
+        padding: 7px 6px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .sort-wrap { flex-shrink: 0; width: auto; }
+    .sort-wrap select { font-size: 10px; padding: 7px 8px; width: auto; }
 
     .games-container {
         grid-template-columns: repeat(4, 1fr);
