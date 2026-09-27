@@ -40,33 +40,29 @@ let searchTerm    = '';
    STORAGE THRESHOLDS
    --------------------------------------------- */
 const FLASH_THRESHOLD     = 54;
-const HARD_256_THRESHOLD  = 230;
+const HARD_250_THRESHOLD  = 230;
 const HARD_320_THRESHOLD  = 297.5;
 const HARD_500_THRESHOLD  = 464;
 const MAX_THRESHOLD       = 464;
 
 /* ---------------- INTRO ---------------- */
 window.addEventListener('load', () => {
-    if (introImage) {
-        const imgSrc = introImage.getAttribute('src');
-        if (introLeft)  introLeft.style.backgroundImage  = `url('${imgSrc}')`;
-        if (introRight) introRight.style.backgroundImage = `url('${imgSrc}')`;
-    }
+    const imgSrc = introImage.getAttribute('src');
+    introLeft.style.backgroundImage  = `url('${imgSrc}')`;
+    introRight.style.backgroundImage = `url('${imgSrc}')`;
 
     setTimeout(() => {
-        if (introScreen) introScreen.classList.add('split');
+        introScreen.classList.add('split');
 
         setTimeout(() => {
-            if (introScreen) {
-                introScreen.style.opacity = '0';
-                setTimeout(() => {
-                    introScreen.classList.add('hidden');
-                    if (mainApp) mainApp.classList.remove('hidden');
-                    renderGames();
-                    updateSummary();
-                    adjustGamesTop();
-                }, 400);
-            }
+            introScreen.style.opacity = '0';
+            setTimeout(() => {
+                introScreen.classList.add('hidden');
+                mainApp.classList.remove('hidden');
+                renderGames();
+                updateSummary();
+                adjustGamesTop();
+            }, 400);
         }, 1400);
     }, 1600);
 });
@@ -99,7 +95,6 @@ function getTotalSize() {
 }
 
 function showToast(text, type = 'success') {
-    if (!toast) return;
     toast.textContent = text;
     toast.classList.remove('hidden');
     toast.classList.add('show');
@@ -126,13 +121,13 @@ function getCurrentDriveInfo() {
             price: 0,
             capacity: 64
         };
-    } else if (total <= HARD_256_THRESHOLD) {
+    } else if (total <= HARD_250_THRESHOLD) {
         return {
-            label: 'Hard 256GB',
-            limit: HARD_256_THRESHOLD,
-            color: 'linear-gradient(90deg, #2196F3, #03A9F4)',
+            label: 'Hard 250GB',
+            limit: HARD_250_THRESHOLD,
+            color: 'linear-gradient(90deg, #00b4ff, #0066ff)',
             price: 25000,
-            capacity: 256
+            capacity: 250
         };
     } else if (total <= HARD_320_THRESHOLD) {
         return {
@@ -189,7 +184,6 @@ function getFilteredSortedGames() {
 
 /* ---------------- RENDER GAMES ---------------- */
 function renderGames() {
-    if (!gamesContainer) return;
     gamesContainer.innerHTML = '';
     const list = getFilteredSortedGames();
     const totalSelected = getTotalSize();
@@ -262,55 +256,40 @@ function updateSummary() {
     const total = getTotalSize();
     const drive = getCurrentDriveInfo();
 
-    if (storageLabel) storageLabel.textContent = drive.label;
+    storageLabel.textContent = drive.label;
 
     let pct = drive.limit > 0 ? (total / drive.limit) * 100 : 0;
     if (pct > 100) pct = 100;
     if (pct < 0) pct = 0;
 
-    if (progressBar) {
-        progressBar.style.width = pct + '%';
-        progressBar.style.background = drive.color;
+    progressBar.style.width = pct + '%';
+    progressBar.style.background = drive.color;
+
+    barPercent.textContent = pct.toFixed(1) + '% USED';
+
+    dashBar.classList.remove('warn', 'danger');
+    if (pct >= 95) dashBar.classList.add('danger');
+    else if (pct >= 75) dashBar.classList.add('warn');
+
+    requestBtn.disabled = selectedGames.length === 0;
+}
+
+/* ---------------- PRICES MODAL ---------------- */
+driveBtn.addEventListener('click', () => {
+    pricesModal.classList.remove('hidden');
+});
+
+/* ---------------- REQUEST MODAL ---------------- */
+requestBtn.addEventListener('click', () => {
+    if (selectedGames.length === 0) {
+        showToast('تکایە یاریەکان دیاری بکە', 'error');
+        return;
     }
-
-    if (barPercent) barPercent.textContent = pct.toFixed(1) + '% USED';
-
-    if (dashBar) {
-        dashBar.classList.remove('warn', 'danger');
-        if (pct >= 95) dashBar.classList.add('danger');
-        else if (pct >= 75) dashBar.classList.add('warn');
-    }
-
-    if (requestBtn) requestBtn.disabled = selectedGames.length === 0;
-}
+    requestModal.classList.remove('hidden');
+});
 
 /* ---------------------------------------------
-   PRICES MODAL — opened by driveBtn (نرخەکان)
-   Completely independent from the request flow.
-   --------------------------------------------- */
-if (driveBtn) {
-    driveBtn.addEventListener('click', () => {
-        if (pricesModal) pricesModal.classList.remove('hidden');
-    });
-}
-
-/* ---------------------------------------------
-   REQUEST MODAL — opened by "ناردنی داواکاری"
-   Directly shows WhatsApp / Copy options.
-   Not related to the prices modal at all.
-   --------------------------------------------- */
-if (requestBtn) {
-    requestBtn.addEventListener('click', () => {
-        if (selectedGames.length === 0) {
-            showToast('تکایە یاریەکان دیاری بکە', 'error');
-            return;
-        }
-        if (requestModal) requestModal.classList.remove('hidden');
-    });
-}
-
-/* ---------------------------------------------
-   BUILD REQUEST MESSAGE
+   BUILD REQUEST MESSAGE (OLD FORMAT)
    ---------------------------------------------
    Format:
        Game1
@@ -371,24 +350,20 @@ requestOptions.forEach(opt => {
 });
 
 /* ---------------- CLEAR ---------------- */
-if (clearBtn) {
-    clearBtn.addEventListener('click', () => {
-        if (selectedGames.length === 0) return;
-        if (!confirm('هەموو یاریە دیاریکراوەکان بسڕدرێنەوە؟')) return;
-        selectedGames = [];
-        updateSummary();
-        renderGames();
-        showToast('هەڵبژاردن سڕدرایەوە');
-    });
-}
+clearBtn.addEventListener('click', () => {
+    if (selectedGames.length === 0) return;
+    if (!confirm('هەموو یاریە دیاریکراوەکان بسڕدرێنەوە؟')) return;
+    selectedGames = [];
+    updateSummary();
+    renderGames();
+    showToast('هەڵبژاردن سڕدرایەوە');
+});
 
 /* ---------------- SEARCH / FILTER / SORT ---------------- */
-if (searchInput) {
-    searchInput.addEventListener('input', (e) => {
-        searchTerm = e.target.value;
-        renderGames();
-    });
-}
+searchInput.addEventListener('input', (e) => {
+    searchTerm = e.target.value;
+    renderGames();
+});
 
 filterTabs.forEach(tab => {
     tab.addEventListener('click', () => {
@@ -399,33 +374,28 @@ filterTabs.forEach(tab => {
     });
 });
 
-if (sortSelect) {
-    sortSelect.addEventListener('change', (e) => {
-        currentSort = e.target.value;
-        renderGames();
-    });
-}
+sortSelect.addEventListener('change', (e) => {
+    currentSort = e.target.value;
+    renderGames();
+});
 
 /* ---------------- MODAL CLOSE ---------------- */
 closeBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-        const modal = btn.closest('.modal-overlay');
-        if (modal) modal.classList.add('hidden');
+        btn.closest('.modal-overlay').classList.add('hidden');
     });
 });
 
 [pricesModal, requestModal].forEach(modal => {
-    if (modal) {
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) modal.classList.add('hidden');
-        });
-    }
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) modal.classList.add('hidden');
+    });
 });
 
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-        if (pricesModal) pricesModal.classList.add('hidden');
-        if (requestModal) requestModal.classList.add('hidden');
+        pricesModal.classList.add('hidden');
+        requestModal.classList.add('hidden');
     }
 });
 
