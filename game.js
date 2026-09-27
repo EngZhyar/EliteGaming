@@ -1643,6 +1643,8 @@ const games = [
         image: "assets/terminator 3.jpg",
         size: 4.37
     }
+  ,{image: "assets/The flintstone.jpg", size: 0.08 }
+
     ,{image: "assets/The haunted mansion.jpg", size: 1.30 }
 ,{image: "assets/they came from the skies.jpg", size: 0.13 }
 ,{image: "assets/tim burton the nightmare.jpg", size: 4.22 }
