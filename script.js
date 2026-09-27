@@ -40,6 +40,7 @@ let searchTerm    = '';
    STORAGE THRESHOLDS
    --------------------------------------------- */
 const FLASH_THRESHOLD     = 54;
+const HARD_256_THRESHOLD  = 230;
 const HARD_320_THRESHOLD  = 297.5;
 const HARD_500_THRESHOLD  = 464;
 const MAX_THRESHOLD       = 464;
@@ -119,6 +120,14 @@ function getCurrentDriveInfo() {
             color: 'linear-gradient(90deg, #4CAF50, #8BC34A)',
             price: 0,
             capacity: 64
+        };
+    } else if (total <= HARD_256_THRESHOLD) {
+        return {
+            label: 'Hard 256GB',
+            limit: HARD_256_THRESHOLD,
+            color: 'linear-gradient(90deg, #2196F3, #03A9F4)',
+            price: 25000,
+            capacity: 256
         };
     } else if (total <= HARD_320_THRESHOLD) {
         return {
