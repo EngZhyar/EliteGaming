@@ -545,10 +545,6 @@ const games = [
         size: 4.11
     },
     {
-        image: "assets/freedom fighter.jpg",
-        size: 1.92
-    },
-    {
         image: "assets/full spectrum.jpg",
         size: 2.72
     },
