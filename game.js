@@ -364,6 +364,11 @@ const games = [
         image: "assets/downhill.jpg",
         size: 2.58
     }
+    ,
+    {
+        image: "assets/downhill kurdish.png",
+        size: 0.67
+    }
     ,{image: "assets/Dragon quest the journey.jpg", size: 3.78 }
 ,{image: "assets/Drakengard.jpg", size: 4.14 }
     ,
@@ -791,6 +796,11 @@ const games = [
         image: "assets/jet li.jpg",
         size: 2.67
     },
+    
+    {
+        image: "assets/jet le kurdish.png",
+        size: 2.67
+    },
     {
         image: "assets/jurasic hunter.jpg",
         size: 1.16
@@ -1067,6 +1077,10 @@ const games = [
         image: "assets/over the hedge.jpg",
         size: 1.56
     },
+     {
+        image: "assets/over the hedge kurdish.png",
+        size: 1.56
+    },
     {
         image: "assets/panda.jpg",
         size: 3.89
@@ -1256,6 +1270,12 @@ const games = [
         image: "assets/rataouille.jpg",
         size: 1.16
     }
+},
+    {
+        image: "assets/rataouille kurdish.png",
+        size: 1.16
+    }
+    
     ,{image: "assets/Ratchet&Clank 2 Going Commando.jpg", size: 3.30 }
 
     
@@ -1494,6 +1514,10 @@ const games = [
         image: "assets/spartan.jpg",
         size: 2.04
     },
+      {
+        image: "assets/spartan kurdish.jpeg",
+        size: 2.04
+    },
     {
         image: "assets/spider 1.jpg",
         size: 2.81
@@ -1611,6 +1635,10 @@ const games = [
     },
     {
         image: "assets/tarzan.jpg",
+        size: 0.99
+    },
+        {
+        image: "assets/tarzan kurdish.png",
         size: 0.99
     },
     {
