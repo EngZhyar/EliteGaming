@@ -1514,10 +1514,7 @@ const games = [
         image: "assets/spartan.jpg",
         size: 2.04
     },
-      {
-        image: "assets/spartan kurdish.jpeg",
-        size: 2.04
-    },
+    
     {
         image: "assets/spider 1.jpg",
         size: 2.81
