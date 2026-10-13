@@ -1270,7 +1270,7 @@ const games = [
         image: "assets/rataouille.jpg",
         size: 1.16
     }
-},
+,
     {
         image: "assets/rataouille kurdish.png",
         size: 1.16
