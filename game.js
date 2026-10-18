@@ -1085,6 +1085,10 @@ const games = [
         image: "assets/panda.jpg",
         size: 3.89
     },
+      {
+        image: "assets/panda kurdish.png",
+        size: 3.89
+    },
     {
         image: "assets/pes 49.png",
         size: 1.18
@@ -1310,6 +1314,10 @@ const games = [
         image: "assets/resident evil 4.jpg",
         size: 4.25
     },
+     {
+        image: "assets/resident evil 4 kurdish.jpeg",
+        size: 4.13
+    },
     {
         image: "assets/resident evil code survival 2 veronica.jpg",
         size: 1.89
@@ -1514,6 +1522,10 @@ const games = [
         image: "assets/spartan.jpg",
         size: 2.04
     },
+        {
+        image: "assets/spartan kurdish.jpeg",
+        size: 2.04
+    },
     
     {
         image: "assets/spider 1.jpg",
@@ -1708,6 +1720,10 @@ const games = [
     },
     {
         image: "assets/tom and jerry.jpg",
+        size: 0.47
+    },
+      {
+        image: "assets/tom and jerry kurdish.png",
         size: 0.47
     },
     {
