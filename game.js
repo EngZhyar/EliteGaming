@@ -90,7 +90,8 @@ const games = [
         image: "assets/barnyard.jpg",
         size: 1.92
     }
-    
+    ,{ image: "assets/Barnyard Kurdish.jpg", size: 1.92}
+
     ,{image: "assets/Battle Engine Aquila.jpg", size: 3.36 }
 
     ,
@@ -132,6 +133,7 @@ const games = [
     }
     
     ,{image: "assets/Berserk.jpg", size: 3.98 }
+,{ image: "assets/black kurdish.png", size: 3.65}
 
     ,
 
@@ -511,6 +513,11 @@ const games = [
         image: "assets/fifa 14.jpg",
         size: 4.37
     }
+
+,{ image: "assets/FIFA street .jpg", size: 4.37}
+,{ image: "assets/FIFA street 2.jpg", size: 4.37}
+
+    
     ,{image: "assets/Final Armada.jpg", size: 1.18 }
 
 ,{image:"assets/Fight Club.jpg",size:1.41},
@@ -689,6 +696,7 @@ const games = [
         size: 4.33
     }
     ,{image: "assets/harry potter prisoner of azkaban.jpg", size: 2.13 }
+,{ image: "assets/harry potter and the philosophers stone.jpg", size: 3.91}
 
     ,
     {
@@ -791,7 +799,10 @@ const games = [
     {
         image: "assets/iron man.jpg",
         size: 1.31
-    },
+    }
+    ,{ image: "assets/jackie chan kurdish.jpeg", size: 1.37}
+
+    ,
     {
         image: "assets/jet li.jpg",
         size: 2.67
@@ -823,7 +834,10 @@ const games = [
     {
         image: "assets/killzone.jpg",
         size: 4.30
-    },
+    }
+    ,{ image: "assets/king arthur ps2 cover image.jpg", size: 2.62}
+
+    ,
     {
         image: "assets/king kong.jpg",
         size: 1.21
@@ -1080,7 +1094,10 @@ const games = [
      {
         image: "assets/over the hedge kurdish.png",
         size: 1.56
-    },
+    }
+    ,{ image: "assets/Pac man world2.jpg", size: 1.04}
+
+    ,
     {
         image: "assets/panda.jpg",
         size: 3.89
@@ -1108,7 +1125,11 @@ const games = [
     {
         image: "assets/pes 2004.jpg",
         size: 1.71
-    },
+    }
+    ,{ image: "assets/PES 2004 Arabic.png", size: 0.53}
+
+    
+    ,
     {
         image: "assets/pes 2005.jpg",
         size: 2.07
@@ -1156,11 +1177,19 @@ const games = [
     {
         image: "assets/PES 2014.jpg",
         size: 1.24
-    },
+    }
+    
+    ,{ image: "assets/PES 2014 Arabic.jpg", size: 0.65}
+
+    ,
     {
         image: "assets/pes 2015.jpeg",
         size: 1.35
-    },
+    }
+    ,{ image: "assets/pes 2015 Arabic.jpeg", size: 1.72}
+
+    
+    ,
     {
         image: "assets/pes 2016.jpeg",
         size: 1.82
@@ -1168,7 +1197,11 @@ const games = [
     {
         image: "assets/PES 2017.png",
         size: 1.54
-    },
+    }
+    ,{ image: "assets/PES 2017 arabic.png", size: 1.71}
+
+    
+    ,
     {
         image: "assets/pes 2018.jpeg",
         size: 1.76
@@ -1317,7 +1350,10 @@ const games = [
      {
         image: "assets/resident evil 4 kurdish.jpeg",
         size: 4.13
-    },
+    }
+    ,{ image: "assets/resident evil 4 hack.png", size: 4.13}
+
+    ,
     {
         image: "assets/resident evil code survival 2 veronica.jpg",
         size: 1.89
@@ -1361,7 +1397,10 @@ const games = [
     {
         image: "assets/robots.jpg",
         size: 3.60
-    },
+    }
+    ,{ image: "assets/ronaldo 2007.jpg", size: 1.33}
+
+    ,
     {
         image: "assets/rule of rose.jpg",
         size: 3.16
@@ -1429,7 +1468,10 @@ const games = [
     {
         image: "assets/shadow of rome.jpg",
         size: 4.37
-    },
+    }
+    ,{ image: "assets/shadow of rome kurdish.png", size: 4.38}
+
+    ,
     {
         image: "assets/shark tale.jpg",
         size: 1.26
@@ -1461,7 +1503,10 @@ const games = [
     {
         image: "assets/silent hill 2.jpg",
         size: 3.61
-    },
+    }
+    ,{ image: "assets/silent hill 2 kurdish.jpeg", size: 3.55}
+
+    ,
     {
         image: "assets/silent hill 3.jpg",
         size: 3.33
@@ -1515,6 +1560,9 @@ const games = [
         size: 2.48
     }
     ,{image: "assets/Soul reaver 2.jpg", size: 4.33 }
+
+    ,{ image: "assets/Sonic Riders.jpg", size: 1.77}
+
 ,{image: "assets/Spawn Armageddon.jpg", size: 2.06 }
     
     ,
@@ -1741,7 +1789,9 @@ const games = [
     {
         image: "assets/total over dose.jpg",
         size: 4.37
-    },
+    }
+    ,{ image: "assets/totally spice.jpg", size: 1.33}
+    ,
     {
         image: "assets/toy story 3.jpg",
         size: 1.43
