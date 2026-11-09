@@ -28,10 +28,6 @@ const games = [
         size: 4.24
     },
     {
-        image: "assets/25 to life.jpg",
-        size: 1.79
-    },
-    {
         image: "assets/50 cent.jpg",
         size: 5.94
     },
