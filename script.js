@@ -197,7 +197,10 @@ function renderGames() {
                     showToast('ڤیدیۆ بۆ ئەم یاریە بەردەست نییە', 'error');
                     return;
                 }
-                openVideo(game.image);
+                const v = (typeof getVideoByImage === 'function') ? getVideoByImage(game.image) : null;
+                if (v && v.link) {
+                    window.open(v.link, '_blank');
+                }
                 return;
             }
             if (isDisabled) {
