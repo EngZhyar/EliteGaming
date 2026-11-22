@@ -333,14 +333,6 @@ const games = [
     {
         image: "assets/destroy all humans 2.jpg",
         size: 4.19
-    },
-    {
-        image: "assets/dmc 1.jpg",
-        size: 4.37
-    },
-    {
-        image: "assets/dmc 2.jpg",
-        size: 8.75
     }
     ,{image: "assets/Don 2.jpg", size: 2.93 }
 
