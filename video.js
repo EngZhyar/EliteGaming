@@ -139,7 +139,7 @@ link: "https://www.tiktok.com/@elitegaming210/video/7707294927234911494"
     
     
     ,image: "assets/Berserk.jpg", 
-link:  https://www.tiktok.com/@elitegaming210/video/7708093484850334982
+link: " https://www.tiktok.com/@elitegaming210/video/7708093484850334982"
 
 , image: "assets/black kurdish.png", 
 
