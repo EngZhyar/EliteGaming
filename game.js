@@ -315,10 +315,6 @@ const games = [
         size: 2.01
     },
     {
-        image: "assets/def jam ny.jpg",
-        size: 4.37
-    },
-    {
         image: "assets/desert storm 1.jpg",
         size: 3.93
     },
