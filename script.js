@@ -167,14 +167,17 @@ function renderGames() {
 
         const isDisabled = isVideosMode ? !videoAvailable : !canSelect;
 
+        /* Video badge + red border ONLY inside the Videos tab */
+        const showVideoStyle = isVideosMode && videoAvailable;
+
         const card = document.createElement('div');
         card.className = 'game-card';
         if (isSelected && !isVideosMode) card.classList.add('selected');
         if (isDisabled) card.classList.add('disabled');
-        if (videoAvailable) card.classList.add('has-video');
+        if (showVideoStyle) card.classList.add('has-video');
 
         card.innerHTML = `
-            ${videoAvailable ? '<div class="video-badge">▶</div>' : ''}
+            ${showVideoStyle ? '<div class="video-badge">▶</div>' : ''}
             <div class="game-img-wrap">
                 <img src="${game.image}" loading="lazy" alt="${getGameName(game.image)}">
             </div>
@@ -197,10 +200,7 @@ function renderGames() {
                     showToast('ڤیدیۆ بۆ ئەم یاریە بەردەست نییە', 'error');
                     return;
                 }
-                const v = (typeof getVideoByImage === 'function') ? getVideoByImage(game.image) : null;
-                if (v && v.link) {
-                    window.open(v.link, '_blank');
-                }
+                openVideo(game.image);
                 return;
             }
             if (isDisabled) {
@@ -269,12 +269,15 @@ requestBtn.addEventListener('click', () => {
     requestModal.classList.remove('hidden');
 });
 
-/* ---------------- REQUEST MESSAGE ---------------- */
+/* ---------------- REQUEST MESSAGE (names A→Z) ---------------- */
 function buildRequestMessage() {
     const names = selectedGames.map(img => {
         const g = games.find(x => x.image === img);
         return g ? getGameName(g.image) : '';
     }).filter(Boolean);
+
+    // Sort names alphabetically A → Z
+    names.sort((a, b) => a.localeCompare(b));
 
     const total = getTotalSize();
     const count = selectedGames.length;
