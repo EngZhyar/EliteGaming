@@ -315,6 +315,30 @@ const videos = [
         image: "assets/crash twinstanty.jpg",
         link: "https://www.tiktok.com/@elitegaming210/video/7711043238357945618"
     }
+
+,
+        {image: "assets/crazy frog.jpg",
+        link:"https://www.tiktok.com/@elitegaming210/video/7711059267553365249"
+    
+    
+        }
+        ,
+        {image: "assets/crazy taxi.jpg",
+        link: "https://www.tiktok.com/@elitegaming210/video/7711074604353146118"
+    
+    
+        },{image: "assets/curious goerge.jpg",
+        link: "https://www.tiktok.com/@elitegaming210/video/7711102255432355073"
+    
+
+        },
+        
+        {image: "assets/darkwatch.jpg",
+        link: "https://www.tiktok.com/@elitegaming210/video/7711368966341528833"
+     }
+
+
+   
 ];
 
 /* ---------------------------------------------------------
@@ -398,3 +422,4 @@ function closeVideo() {
     if (player) player.src = 'about:blank';
     if (modal)  modal.classList.add('hidden');
 }
+
