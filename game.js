@@ -811,7 +811,6 @@ const games = [
         image: "assets/killzone.jpg",
         size: 4.30
     }
-    ,{ image: "assets/king arthur ps2 cover image.jpg", size: 2.62}
 
     ,
     {
