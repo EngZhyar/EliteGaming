@@ -359,10 +359,6 @@ const games = [
         size: 3.82
     },
     {
-        image: "assets/driver parallel.jpg",
-        size: 3.60
-    },
-    {
         image: "assets/dynasty warriors 2.jpg",
         size: 0.52
     },
