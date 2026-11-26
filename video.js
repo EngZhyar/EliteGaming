@@ -337,6 +337,90 @@ const videos = [
         link: "https://www.tiktok.com/@elitegaming210/video/7711368966341528833"
      }
 
+   
+
+,{image: "assets/dbz 3.jpg",
+        link: "https://www.tiktok.com/@elitegaming210/video/7711384921553718534"
+    ,
+    
+        }
+        ,
+        
+        {image: "assets/dbz inifinte.jpg",
+        link: "https://www.tiktok.com/@elitegaming210/video/7711400317941861633"
+    ,
+    
+        },{image: "assets/dead to rights 1.jpg",
+        link: "https://www.tiktok.com/@elitegaming210/video/7711425807406861574"
+    ,
+    
+        },{image: "assets/desert storm 1.jpg",
+        link: "https://www.tiktok.com/@elitegaming210/video/7711441877869792564"
+    ,
+    
+        },{image: "assets/desert storm 2.jpg",
+        link: "https://www.tiktok.com/@elitegaming210/video/7711459042031422721"
+    ,
+    
+        },{image: "assets/desney princces.jpg",
+        link: "https://www.tiktok.com/@elitegaming210/video/7711473551999552769"
+    ,
+    
+        },{image: "assets/destroy all humans 1.jpg",
+        link: "https://www.tiktok.com/@elitegaming210/video/7711736178881416466"
+    ,
+    
+        },{image: "assets/destroy all humans 2.jpg",
+        link: "https://www.tiktok.com/@elitegaming210/video/7711754105332485383"
+    
+    ,},
+{image: "assets/Don 2.jpg", link: "https://www.tiktok.com/@elitegaming210/video/7711770514431216948" 
+
+    
+    ,
+    
+        },{image: "assets/dora.jpg",
+        link: "https://www.tiktok.com/@elitegaming210/video/7711789107936087302"
+    ,
+    
+        },{image: "assets/downhill.jpg",
+        link: "https://www.tiktok.com/@elitegaming210/video/7711806585676385542"
+     ,
+     }
+
+,
+{image: "assets/Dragon quest the journey.jpg", 
+link: "https://www.tiktok.com/@elitegaming210/video/7711828732666858804"
+,}
+,
+{image: "assets/Drakengard.jpg", 
+link: "https://www.tiktok.com/@elitegaming210/video/7712104326881152257"
+    ,
+    
+        },{image: "assets/driv3r.jpg",
+        link: "https://www.tiktok.com/@elitegaming210/video/7712122679276408070"
+    ,
+        
+        },{image: "assets/dynasty warriors 2.jpg",
+        link: "https://www.tiktok.com/@elitegaming210/video/7712143270679301428"
+    ,
+    
+        },{image: "assets/dynasty warriors 3.jpg",
+        link: "https://www.tiktok.com/@elitegaming210/video/7712160129986235654"
+    ,
+        }
+,
+{image: "assets/dynasty warriors 5.jpg",
+        link: "https://www.tiktok.com/@elitegaming210/video/7712195870258777345"
+    ,
+    
+        },{image: "assets/dynasty warriors 5E.jpg",
+        link: "https://www.tiktok.com/@elitegaming210/video/7712177648516025606"
+    ,
+    
+        }
+
+
 
    
 ];
